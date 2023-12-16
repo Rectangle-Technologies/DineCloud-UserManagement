@@ -41,10 +41,13 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "user_management.bootstraper",
+      name: "user_management_bootstraper",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Login": "./src/components/forms/Login",
+        "./Register": "./src/components/forms/Register"
+      },
       shared: {
         ...deps,
         react: {

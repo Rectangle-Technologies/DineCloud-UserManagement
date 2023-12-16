@@ -1,5 +1,5 @@
 {
-  "name": "user-management.bootstraper",
+  "name": "user_management_bootstraper",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
@@ -31,7 +31,16 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.0",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.8",
+    "axios": "^1.6.2",
+    "formik": "^2.4.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.1",
+    "yup": "^1.3.3"
   }
 }

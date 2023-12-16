@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
+import RegisterForm from "./components/forms/Register";
+import LoginForm from "./components/forms/Login";
 
 const App = () => (
   <div className="container">
-    <div>Name: user-management.bootstraper</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
+    <RegisterForm />
+    <LoginForm callBackIfLoggedIn={() => {console.log("User Already logged in"); alert("User already logged in")}} />
   </div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
