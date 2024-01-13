@@ -41,7 +41,6 @@ export default function RegisterForm() {
         },
         validationSchema: yupValidationSchema,
         onSubmit: (values, actions) => {
-            console.log(values);
             actions.setSubmitting(false);
         }
     });

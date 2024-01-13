@@ -39,7 +39,6 @@ export default function LoginForm({ callBackIfLoggedIn }) {
         onSubmit: (values, actions) => {
             post('http://localhost:4000/USER/login', null, values)
                 .then((response) => {
-                    console.log(response);
                     if (response?.data?.data) {
                         // set token expiry to 1 day
                         response.data.data.tokenExpiry = new Date().getTime() + 86400000;
@@ -51,7 +50,6 @@ export default function LoginForm({ callBackIfLoggedIn }) {
                     callBackIfLoggedIn();
                 }
                 ).catch((error) => {
-                    console.log(error);
                     alert(error?.response?.data?.message || 'Invalid Credentials');
                     actions.setSubmitting(false);
                 });
